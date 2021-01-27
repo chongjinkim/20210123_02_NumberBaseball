@@ -61,6 +61,15 @@ public class MainDrive {
 					 }
 				}
 			}
+			//구해진 S/B 갯수를 알려주자
+			System.out.println(strikeCount + "S" + ballCount + "B 입니다.");
+			
+			//S/B 갯수 판단이 끝나고 나면 => 3S인지 확인
+			
+			if(strikeCount == 3) {
+				System.out.println("축하합니다.! 정답을 맞췄습니다");
+				break;
+			}
 		}
 
 	}
