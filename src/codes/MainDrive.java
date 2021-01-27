@@ -14,7 +14,10 @@ public class MainDrive {
 		// 스캐너는 한번만 만들어 두면 되니, while앞에서 만들자
 
 		Scanner scan = new Scanner(System.in);
-
+		// 몇 번 시도했는지 기록할 변수
+		
+		int inputCount = 0;
+		
 		// 3S를 맞출 때 까지 입력을 해서 반복을 받자
 
 		while (true) {
@@ -22,6 +25,8 @@ public class MainDrive {
 			System.out.print("3자리 숫자 입력 : ");
 			int input = scan.nextInt();
 
+			//한번 더 입력했다고 기록
+			inputCount++;
 			// 배열 {7, 4, 1} vs 입력값 741 => {7, 4, 1}로 분해 작업 필요
 
 			int[] myNumbers = new int[3];
@@ -68,6 +73,9 @@ public class MainDrive {
 			
 			if(strikeCount == 3) {
 				System.out.println("축하합니다.! 정답을 맞췄습니다");
+			//몇 번 만에 맞췄는지도 구해야 한다.	
+				System.out.println(inputCount + "회 만에 맞췄습니다.");
+				
 				break;
 			}
 		}
