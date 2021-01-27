@@ -26,13 +26,14 @@ public class MainDrive {
 
 			int[] myNumbers = new int[3];
 
-			// myNumbers의 0번 칸 : 입력값의 100의 자리
+			// myNumbers의 0번 칸 : 입력값의 100의 자리,입력값은 100으로 나눈 몫이 들어간다
 			myNumbers[0] = input / 100;
 			// myNumbers의 1번 칸 : 입력값의 10 자리
 			myNumbers[1] = input / 10 % 10;
 
-			// myNumbers의 2번 칸 : 입력값의 1의 자리 = > 741 / 10 % 10
+			// myNumbers의 2번 칸 : 입력값의 1의 자리 = > 4 / 10 % 10
 			myNumbers[2] = input % 10;
+					
 
 		}
 
